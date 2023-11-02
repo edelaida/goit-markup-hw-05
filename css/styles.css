@@ -624,19 +624,19 @@ fill: #ffffff;
 /* *************** MODAL-FORMA ********* */
 
 .modal-title {
-    display: block;
+   /* display: block;*/
     color: var(--title-color);
     text-align: center;
     font-weight: 500;
     line-height: 1.5;      
-    letter-spacing: 0.02em;
-    margin-top: 72px;
-    margin-left: 24px;
-    /*margin-bottom: 16px;*/
+    letter-spacing: 0.02em;  
+    margin-bottom: 16px;  
 }
 .modal-form {
-    margin: 16px 24px 24px 24px;
-
+    margin: 72px 24px 24px 24px;
+}
+.modal-tabl {
+    margin-bottom: 8px;
 }
 .modal-label {
     display: block;
@@ -647,8 +647,7 @@ fill: #ffffff;
     letter-spacing: 0.04em;
     color: #8E8F99; 
 }
-.modal-field {
-    margin-bottom: 8px;
+.modal-field {    
     position: relative;
 }
 .modal-input {
