@@ -552,6 +552,60 @@ width: calc((100% - 48px) / 3);
 .footer-icons-link:focus {
     background-color: #31d0aa;
 }
+.footer-blok {
+    margin-left: 80px;
+}
+.footer-blok-text {
+    margin-bottom: 16px;
+    color: var(--title-one);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+.footer-form {
+    display: flex;
+}
+.footer-form-lab {
+    display: flex;
+    gap: 24px;
+}
+.footer-form-inpt {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px; 
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px; 
+  color: #ffffff;
+}
+.footer-form-inpt::placeholder {
+    color: #ffffff;
+}
+.footer-btn {
+    min-width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--title-one);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+}
+.footer-btn-icon {
+    margin-left: 16px;
+    fill: var(--title-one);
+}
+
 
 /* *************** MODAL ********* */
 
@@ -654,9 +708,15 @@ fill: #ffffff;
 .modal-input {
     width: 100%;
     height: 40px;
-    padding: 8px 34px;
+    padding-left: 38px;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+    border-color: #4D5AE5;
 }
 .modal-field-icon {
     position: absolute;
@@ -664,6 +724,10 @@ fill: #ffffff;
     left: 16px;
     transform: translateY(-50%);
     fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .modal-field-icon {
+    fill: #4D5AE5;
 }
 .modal-comment {
     margin-bottom: 16px;
@@ -679,45 +743,66 @@ fill: #ffffff;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.17;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     outline: transparent;
+    background-color: transparent;
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-comment-field:focus {
+    border-color: #4D5AE5;
 }
 .modal-comment-field::placeholder {
     color: rgba(46, 47, 66, 0.40);
 }
-.modal-agreement {
+.modal-privacy {
     margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    color: #8E8F99;
-    
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.02em;
 }
-.modal-agreement-input {}
-.modal-checkbox {}
-.modal-checkbox-icon {}
-.modal-agreement-link {
-    color: #4D5AE5;
-    text-decoration-line: underline;
+
+.modal-check {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--customers-btn);
 }
-.modal-submit {
+.modal-privacy-check{
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    fill: transparent;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-user:checked + .modal-privacy-check {
+    background-color: var(--backgr-btn);
+    border: none;
+    fill: var(--text-footer);
+}
+.modal-privacy-link {
+   color: var(--accent-color); 
+   text-decoration: underline;
+}
+
+.modal-submit {
+    display: block;
     color: var(--title-one);
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
-    margin-left: 95px;
-    padding: 16px 32px;
-    align-items: center;
+    cursor: pointer;
+    border: none;
     border-radius: 4px;
     background: #4D5AE5;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);*/
 }
 
 
