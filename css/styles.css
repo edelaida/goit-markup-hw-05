@@ -681,7 +681,6 @@ fill: #ffffff;
 /* *************** MODAL-FORMA ********* */
 
 .modal-title {
-   /* display: block;*/
     color: var(--title-color);
     text-align: center;
     font-weight: 500;
@@ -689,9 +688,7 @@ fill: #ffffff;
     letter-spacing: 0.02em;  
     margin-bottom: 16px;  
 }
-.modal-form {
-    
-}
+.modal-form {}
 .modal-tabl {
     margin-bottom: 8px;
 }
@@ -783,14 +780,10 @@ fill: #ffffff;
     border: 1px solid rgba(46, 47, 66, 0.4);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-user:checked ~ .modal-privacy-check {
+.modal-user:checked + .modal-check > .modal-privacy-check {
+    border: none;
     background-color: var(--backgr-btn);
-    border: none; 
-    fill: var(--text-footer);
-}   
-.modal-user:checked ~ .modal-privacy-check > .modal-check-icon {
-    stroke: #ffffff;
-    background-color: var(--backgr-btn);
+    fill: var(--text-footer) ;
 }
 .modal-privacy-link {
    color: var(--accent-color); 
